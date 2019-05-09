@@ -1,0 +1,16 @@
+PODS:
+  - NBLPickerView (0.1.0)
+
+DEPENDENCIES:
+  - NBLPickerView (from `../`)
+
+EXTERNAL SOURCES:
+  NBLPickerView:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  NBLPickerView: 9b7100a29834d1289357ad92ce2701d3c274d355
+
+PODFILE CHECKSUM: d4e4f13da370c1e721783643994de09a68f80d7e
+
+COCOAPODS: 1.6.1

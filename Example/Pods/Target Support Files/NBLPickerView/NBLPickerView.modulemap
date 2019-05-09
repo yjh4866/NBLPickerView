@@ -1,0 +1,6 @@
+framework module NBLPickerView {
+  umbrella header "NBLPickerView-umbrella.h"
+
+  export *
+  module * { export * }
+}
