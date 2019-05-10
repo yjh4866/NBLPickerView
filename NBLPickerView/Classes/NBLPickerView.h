@@ -27,6 +27,10 @@ NS_ASSUME_NONNULL_BEGIN
 + (instancetype)showOptionList:(NSArray<NSString *> *)list
                   withIndexSel:(NSInteger)indexSel;
 
++ (instancetype)showOptionList:(NSString* (^)(NSInteger row))blockOptionTitle
+               withOptionCount:(NSUInteger)optionCount
+                   andIndexSel:(NSInteger)indexSel;
+
 @end
 
 NS_ASSUME_NONNULL_END

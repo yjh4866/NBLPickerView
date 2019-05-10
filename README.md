@@ -20,10 +20,47 @@ it, simply add the following line to your Podfile:
 pod 'NBLPickerView'
 ```
 
-## 预览 Preview
+
+## 用法一
+```
+NSArray *optionList = @[@"北京", @"天津", @"山西", @"河北"];
+NBLPickerView *pickerView = [NBLPickerView showOptionList:optionList withIndexSel:1];
+pickerView.constraintPickerViewHeight.constant = 200;
+pickerView.titleBackgroundColor = [UIColor whiteColor];
+pickerView.separatorColor = [UIColor redColor];
+pickerView.labelTitle.text = @"在这里";
+    
+__weak typeof(self) weakSelf = self;
+pickerView.blockSelectOption = ^(NSInteger index) {
+    weakSelf.labelOption.text = optionList[index];
+};
+```
+
+### 预览 Preview
 
 ![NBLShareView_1](https://github.com/yjh4866/NBLPickerView/blob/master/screenshots/screenshots_1.jpg?raw=true)
+
+
+## 用法二
+```
+NBLPickerView *pickerView = [NBLPickerView showOptionList:^NSString * _Nonnull(NSInteger row) {
+        return [NSString stringWithFormat:@"%@年", @(1970+row)];
+    } withOptionCount:50 andIndexSel:10];
+pickerView.constraintPickerViewHeight.constant = 200;
+pickerView.titleBackgroundColor = [UIColor whiteColor];
+pickerView.separatorColor = [UIColor blueColor];
+pickerView.labelTitle.text = @"在这里";
+    
+__weak typeof(self) weakSelf = self;
+pickerView.blockSelectOption = ^(NSInteger index) {
+    weakSelf.labelOption.text = [NSString stringWithFormat:@"%@年", @(1970+index)];
+};
+```
+
+### 预览 Preview
+
 ![NBLShareView_2](https://github.com/yjh4866/NBLPickerView/blob/master/screenshots/screenshots_2.jpg?raw=true)
+
 
 ## Author
 

@@ -21,30 +21,43 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yqg-7N-taR">
-                                <rect key="frame" x="87.5" y="293.5" width="200" height="80"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="GrL-xq-U2K"/>
-                                    <constraint firstAttribute="width" constant="200" id="YOM-wJ-shK"/>
-                                </constraints>
-                                <state key="normal" title="测试"/>
-                                <connections>
-                                    <action selector="clickTest:" destination="whP-gf-Uak" eventType="touchUpInside" id="Idh-ik-GAy"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e3p-iV-ErJ">
-                                <rect key="frame" x="166.5" y="192.5" width="42" height="21"/>
+                                <rect key="frame" x="166.5" y="152.5" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yqg-7N-taR">
+                                <rect key="frame" x="87.5" y="213.5" width="200" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="GrL-xq-U2K"/>
+                                    <constraint firstAttribute="width" constant="200" id="YOM-wJ-shK"/>
+                                </constraints>
+                                <state key="normal" title="测试1"/>
+                                <connections>
+                                    <action selector="clickTest1:" destination="whP-gf-Uak" eventType="touchUpInside" id="SMs-oi-hl6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wxP-ND-H3L">
+                                <rect key="frame" x="87.5" y="333.5" width="200" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="euq-gV-U27"/>
+                                    <constraint firstAttribute="height" constant="80" id="jIX-qa-pzf"/>
+                                </constraints>
+                                <state key="normal" title="测试2"/>
+                                <connections>
+                                    <action selector="clickTest2:" destination="whP-gf-Uak" eventType="touchUpInside" id="9v0-TI-tnF"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="e3p-iV-ErJ" firstAttribute="centerX" secondItem="TpU-gO-2f1" secondAttribute="centerX" id="Jea-A0-moe"/>
-                            <constraint firstItem="Yqg-7N-taR" firstAttribute="centerY" secondItem="TpU-gO-2f1" secondAttribute="centerY" id="bf0-Vh-Eep"/>
+                            <constraint firstItem="wxP-ND-H3L" firstAttribute="top" secondItem="Yqg-7N-taR" secondAttribute="bottom" constant="40" id="WIa-qn-Cpb"/>
+                            <constraint firstItem="Yqg-7N-taR" firstAttribute="centerY" secondItem="TpU-gO-2f1" secondAttribute="centerY" constant="-80" id="bf0-Vh-Eep"/>
                             <constraint firstItem="Yqg-7N-taR" firstAttribute="centerX" secondItem="TpU-gO-2f1" secondAttribute="centerX" id="dtc-Ol-5i8"/>
-                            <constraint firstItem="Yqg-7N-taR" firstAttribute="top" secondItem="e3p-iV-ErJ" secondAttribute="bottom" constant="80" id="tpM-Uz-LuG"/>
+                            <constraint firstItem="wxP-ND-H3L" firstAttribute="centerX" secondItem="TpU-gO-2f1" secondAttribute="centerX" id="fYi-Ux-B2U"/>
+                            <constraint firstItem="Yqg-7N-taR" firstAttribute="top" secondItem="e3p-iV-ErJ" secondAttribute="bottom" constant="40" id="tpM-Uz-LuG"/>
                         </constraints>
                     </view>
                     <connections>

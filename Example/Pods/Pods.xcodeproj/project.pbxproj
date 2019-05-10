@@ -49,14 +49,14 @@
 /* Begin PBXFileReference section */
 		173CDF0660801DC4F10D5455317BD77B /* Pods-NBLPickerView_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NBLPickerView_Example-Info.plist"; sourceTree = "<group>"; };
 		17FBF1DA74BC3C07E6A2D90D5DC3E1B2 /* NBLPickerView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = NBLPickerView.modulemap; sourceTree = "<group>"; };
-		1D201F47878F444B8413F5684C1A5968 /* NBLPickerView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NBLPickerView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D201F47878F444B8413F5684C1A5968 /* NBLPickerView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = NBLPickerView.framework; path = NBLPickerView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D366AC6AD74B01308FA949B67FA3672 /* Pods-NBLPickerView_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-NBLPickerView_Example-frameworks.sh"; sourceTree = "<group>"; };
-		29EF40654D6C0875F050CE1294D858DE /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		29EF40654D6C0875F050CE1294D858DE /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		2A381F415E0E382BE42BE9A5469790B5 /* NBLPickerView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = NBLPickerView.xcconfig; sourceTree = "<group>"; };
 		2F08BE58AE39E15B604F5879F6776050 /* Pods-NBLPickerView_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NBLPickerView_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		32235B020BE877E92195DE7463829419 /* NBLPickerView-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "NBLPickerView-Info.plist"; sourceTree = "<group>"; };
-		376D08F8B65A899C301944D69BAA811C /* Pods_NBLPickerView_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NBLPickerView_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		376D08F8B65A899C301944D69BAA811C /* Pods_NBLPickerView_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_NBLPickerView_Tests.framework; path = "Pods-NBLPickerView_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B0BFDFA21D2E59FACEBCB3DEDF916EE /* Pods-NBLPickerView_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-NBLPickerView_Tests-umbrella.h"; sourceTree = "<group>"; };
 		47194750E9B5E8F62515C58604692A79 /* Pods-NBLPickerView_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NBLPickerView_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		4B40CAEE58F9002D39C0EE85D6155C82 /* Pods-NBLPickerView_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-NBLPickerView_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
@@ -64,9 +64,9 @@
 		57DF08F6654E78D58E77C990B8293DF4 /* Pods-NBLPickerView_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-NBLPickerView_Tests.modulemap"; sourceTree = "<group>"; };
 		5B3280E3CB55EAC6F869BE9DD196E52D /* NBLPickerView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NBLPickerView.h; path = NBLPickerView/Classes/NBLPickerView.h; sourceTree = "<group>"; };
 		82F25D54CE1A9E9CBC2639DA39EC433C /* Pods-NBLPickerView_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-NBLPickerView_Example-dummy.m"; sourceTree = "<group>"; };
-		8AC8C04A352FEEDEADD724ED7C9684B8 /* NBLPickerView.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = NBLPickerView.podspec; sourceTree = "<group>"; tabWidth = 2; };
+		8AC8C04A352FEEDEADD724ED7C9684B8 /* NBLPickerView.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = NBLPickerView.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		98549B40577B6FF0257A1DBCCCD02F2C /* NBLPickerView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NBLPickerView-dummy.m"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A17788049181DE9A764DED03E2D59BBC /* Pods-NBLPickerView_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-NBLPickerView_Example.modulemap"; sourceTree = "<group>"; };
 		A33B600BD6C5E8C2F179569B2D34407D /* NBLPickerView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NBLPickerView.m; path = NBLPickerView/Classes/NBLPickerView.m; sourceTree = "<group>"; };
 		AAE2EA90E9CB9B8FBAE87540E6BDDD92 /* Pods-NBLPickerView_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-NBLPickerView_Example-umbrella.h"; sourceTree = "<group>"; };
@@ -75,14 +75,14 @@
 		D1C9C55EB1D1FAE29B40985FB5907DBF /* Pods-NBLPickerView_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NBLPickerView_Tests-Info.plist"; sourceTree = "<group>"; };
 		D96D7F25F93A9EA486E8013589A64DC6 /* NBLPickerView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NBLPickerView-umbrella.h"; sourceTree = "<group>"; };
 		DC1822369DFEA5BD14EDA6FFBA7FA499 /* ResourceBundle-NBLPickerView-NBLPickerView-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-NBLPickerView-NBLPickerView-Info.plist"; sourceTree = "<group>"; };
-		DD52A5CE305456A1C402F68EF917927D /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		DD52A5CE305456A1C402F68EF917927D /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		E413AAF66162356F4C4EDCF6A6255A61 /* Pods-NBLPickerView_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-NBLPickerView_Tests-dummy.m"; sourceTree = "<group>"; };
 		E54C912134C8F7C881834A6C9598206F /* NBLPickerView.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = NBLPickerView.xib; path = NBLPickerView/Assets/NBLPickerView.xib; sourceTree = "<group>"; };
 		E87B41CBDED39B828897DF9EA976B932 /* Pods-NBLPickerView_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NBLPickerView_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		ED6C73639E5508440F2FEB5C5E251696 /* Pods_NBLPickerView_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NBLPickerView_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED6C73639E5508440F2FEB5C5E251696 /* Pods_NBLPickerView_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_NBLPickerView_Example.framework; path = "Pods-NBLPickerView_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDB5E6CB87ABF5BBC590D7C82138A79D /* Pods-NBLPickerView_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NBLPickerView_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		F5179F1A4421794F72BF8E000147F812 /* Pods-NBLPickerView_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NBLPickerView_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		F75511829A2ACEBCBA0D8658B5FFE888 /* NBLPickerView.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NBLPickerView.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		F75511829A2ACEBCBA0D8658B5FFE888 /* NBLPickerView.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = NBLPickerView.bundle; path = "NBLPickerView-NBLPickerView.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -677,7 +677,8 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};

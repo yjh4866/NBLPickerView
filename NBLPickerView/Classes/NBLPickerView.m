@@ -16,6 +16,9 @@
 @property (weak, nonatomic) IBOutlet UIPickerView *pickerView;
 
 @property (nonatomic, strong) NSArray<NSString *> *optionList;
+//
+@property (nonatomic, assign) NSUInteger optionCount;
+@property (nonatomic, strong) NSString *(^blockOptionTitle)(NSInteger row);
 @end
 
 @implementation NBLPickerView
@@ -55,23 +58,18 @@
 + (instancetype)showOptionList:(NSArray<NSString *> *)list
                   withIndexSel:(NSInteger)indexSel
 {
-    // 加载Bundle
-    NSBundle *bundle = [NSBundle bundleForClass:[self class]];
-    // 加载选择视图
-    NBLPickerView *pickerView = [bundle loadNibNamed:@"NBLPickerView.bundle/NBLPickerView" owner:nil options:nil][0];
+    NBLPickerView *pickerView = [NBLPickerView showWithIndexSel:indexSel];
     pickerView.optionList = list;
-    // 显示
-    [[NBLPickerView frontWindow] addSubview:pickerView];
-    pickerView.frame = CGRectMake(0, 0, pickerView.superview.frame.size.width, pickerView.superview.frame.size.height);
-    // 动画展现
-    pickerView.viewCover.alpha = 0;
-    pickerView.contentView.center = CGPointMake(pickerView.bounds.size.width/2, pickerView.bounds.size.height+pickerView.contentView.bounds.size.height/2);
-    [UIView animateWithDuration:0.3f animations:^{
-        pickerView.viewCover.alpha = 1;
-        pickerView.contentView.center = CGPointMake(pickerView.superview.bounds.size.width/2, pickerView.bounds.size.height-pickerView.contentView.bounds.size.height/2);
-    } completion:^(BOOL finished) {
-        [pickerView.pickerView selectRow:indexSel inComponent:0 animated:YES];
-    }];
+    return pickerView;
+}
+
++ (instancetype)showOptionList:(NSString *(^)(NSInteger row))blockOptionTitle
+               withOptionCount:(NSUInteger)optionCount
+                   andIndexSel:(NSInteger)indexSel
+{
+    NBLPickerView *pickerView = [NBLPickerView showWithIndexSel:indexSel];
+    pickerView.blockOptionTitle = blockOptionTitle;
+    pickerView.optionCount = optionCount;
     return pickerView;
 }
 
@@ -111,7 +109,10 @@
 // returns the # of rows in each component..
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
 {
-    return self.optionList.count;
+    if (self.optionList) {
+        return self.optionList.count;
+    }
+    return self.optionCount;
 }
 
 
@@ -119,11 +120,38 @@
 
 - (nullable NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
 {
-    return self.optionList[row];
+    if (self.blockOptionTitle) {
+        return self.blockOptionTitle(row);
+    }
+    else if (row < self.optionList.count) {
+        return self.optionList[row];
+    }
+    return @"";
 }
 
 
 #pragma mark - Private
+
++ (instancetype)showWithIndexSel:(NSInteger)indexSel
+{
+    // 加载Bundle
+    NSBundle *bundle = [NSBundle bundleForClass:[self class]];
+    // 加载选择视图
+    NBLPickerView *pickerView = [bundle loadNibNamed:@"NBLPickerView.bundle/NBLPickerView" owner:nil options:nil][0];
+    // 显示
+    [[NBLPickerView frontWindow] addSubview:pickerView];
+    pickerView.frame = CGRectMake(0, 0, pickerView.superview.frame.size.width, pickerView.superview.frame.size.height);
+    // 动画展现
+    pickerView.viewCover.alpha = 0;
+    pickerView.contentView.center = CGPointMake(pickerView.bounds.size.width/2, pickerView.bounds.size.height+pickerView.contentView.bounds.size.height/2);
+    [UIView animateWithDuration:0.3f animations:^{
+        pickerView.viewCover.alpha = 1;
+        pickerView.contentView.center = CGPointMake(pickerView.superview.bounds.size.width/2, pickerView.bounds.size.height-pickerView.contentView.bounds.size.height/2);
+    } completion:^(BOOL finished) {
+        [pickerView.pickerView selectRow:indexSel inComponent:0 animated:YES];
+    }];
+    return pickerView;
+}
 
 + (UIWindow *)frontWindow
 {

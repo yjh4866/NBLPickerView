@@ -27,9 +27,10 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)clickTest:(id)sender
+- (IBAction)clickTest1:(id)sender
 {
-    __weak NBLPickerView *pickerView = [NBLPickerView showOptionList:@[@"北京", @"天津", @"山西"] withIndexSel:0];
+    NSArray *optionList = @[@"北京", @"天津", @"山西", @"河北"];
+    NBLPickerView *pickerView = [NBLPickerView showOptionList:optionList withIndexSel:1];
     pickerView.constraintPickerViewHeight.constant = 200;
     pickerView.titleBackgroundColor = [UIColor whiteColor];
     pickerView.separatorColor = [UIColor redColor];
@@ -37,7 +38,22 @@
     
     __weak typeof(self) weakSelf = self;
     pickerView.blockSelectOption = ^(NSInteger index) {
-        weakSelf.labelOption.text = pickerView.optionList[index];
+        weakSelf.labelOption.text = optionList[index];
+    };
+}
+- (IBAction)clickTest2:(id)sender
+{
+    NBLPickerView *pickerView = [NBLPickerView showOptionList:^NSString * _Nonnull(NSInteger row) {
+        return [NSString stringWithFormat:@"%@年", @(1970+row)];
+    } withOptionCount:50 andIndexSel:10];
+    pickerView.constraintPickerViewHeight.constant = 200;
+    pickerView.titleBackgroundColor = [UIColor whiteColor];
+    pickerView.separatorColor = [UIColor blueColor];
+    pickerView.labelTitle.text = @"在这里";
+    
+    __weak typeof(self) weakSelf = self;
+    pickerView.blockSelectOption = ^(NSInteger index) {
+        weakSelf.labelOption.text = [NSString stringWithFormat:@"%@年", @(1970+index)];
     };
 }
 
