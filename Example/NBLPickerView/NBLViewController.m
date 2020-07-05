@@ -38,6 +38,10 @@
     pickerView.labelTitle.text = @"在这里";
     
     __weak typeof(self) weakSelf = self;
+    pickerView.blockClickLeftButton = ^BOOL(NSInteger index) {
+        NSLog(@"点击了左边的按钮");
+        return YES;
+    };
     pickerView.blockClickRightButton = ^BOOL(NSInteger index) {
         weakSelf.labelOption.text = optionList[index];
         return YES;

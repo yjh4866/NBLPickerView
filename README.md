@@ -28,11 +28,17 @@ NBLPickerView *pickerView = [NBLPickerView showOptionList:optionList withIndexSe
 pickerView.constraintPickerViewHeight.constant = 200;
 pickerView.titleBackgroundColor = [UIColor whiteColor];
 pickerView.separatorColor = [UIColor redColor];
+[pickerView.buttonLeft setTitle:@"左边" forState:UIControlStateNormal];
 pickerView.labelTitle.text = @"在这里";
-    
+
 __weak typeof(self) weakSelf = self;
-pickerView.blockSelectOption = ^(NSInteger index) {
+pickerView.blockClickLeftButton = ^BOOL(NSInteger index) {
+    NSLog(@"点击了左边的按钮");
+    return YES;
+};
+pickerView.blockClickRightButton = ^BOOL(NSInteger index) {
     weakSelf.labelOption.text = optionList[index];
+    return YES;
 };
 ```
 
@@ -44,16 +50,18 @@ pickerView.blockSelectOption = ^(NSInteger index) {
 ## 用法二
 ```
 NBLPickerView *pickerView = [NBLPickerView showOptionList:^NSString * _Nonnull(NSInteger row) {
-        return [NSString stringWithFormat:@"%@年", @(1970+row)];
-    } withOptionCount:50 andIndexSel:10];
+    return [NSString stringWithFormat:@"%@年", @(1970+row)];
+} withOptionCount:50 andIndexSel:10];
 pickerView.constraintPickerViewHeight.constant = 200;
 pickerView.titleBackgroundColor = [UIColor whiteColor];
 pickerView.separatorColor = [UIColor blueColor];
+pickerView.constraintLeftButtonWidth.constant = 120;
 pickerView.labelTitle.text = @"在这里";
-    
+
 __weak typeof(self) weakSelf = self;
-pickerView.blockSelectOption = ^(NSInteger index) {
+pickerView.blockClickRightButton = ^BOOL(NSInteger index) {
     weakSelf.labelOption.text = [NSString stringWithFormat:@"%@年", @(1970+index)];
+    return YES;
 };
 ```
 

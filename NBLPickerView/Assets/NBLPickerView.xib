@@ -42,7 +42,6 @@
                                     <state key="normal" title="左边按钮"/>
                                     <connections>
                                         <action selector="clickLeftButton:" destination="mOF-cn-VB3" eventType="touchUpInside" id="I3E-oY-D7x"/>
-                                        <action selector="clickOK:" destination="mOF-cn-VB3" eventType="touchUpInside" id="58M-Hd-MOP"/>
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bd5-Nw-dTT">
