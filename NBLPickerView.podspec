@@ -22,7 +22,7 @@ Object-C。基于UIPickerView的列表选择，目前只支持一列。based on 
                        DESC
 
   s.homepage         = 'https://github.com/yjh4866/NBLPickerView'
-  s.screenshots     = 'https://github.com/yjh4866/NBLPickerView/blob/master/screenshots/screenshots_1.jpg?raw=true', 'https://github.com/yjh4866/NBLPickerView/blob/master/screenshots/screenshots_2.jpg?raw=true'
+  s.screenshots     = 'https://github.com/yjh4866/NBLPickerView/blob/master/screenshots/screenshots_1.png?raw=true', 'https://github.com/yjh4866/NBLPickerView/blob/master/screenshots/screenshots_2.png?raw=true'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { '杨建红' => 'yjh4866@163.com' }
   s.source           = { :git => 'https://github.com/yjh4866/NBLPickerView.git', :tag => s.version.to_s }
