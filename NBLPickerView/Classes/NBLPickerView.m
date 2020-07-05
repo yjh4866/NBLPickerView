@@ -73,6 +73,11 @@
     return pickerView;
 }
 
+- (NSInteger)getSelectedIndex
+{
+    return [self.pickerView selectedRowInComponent:0];
+}
+
 
 #pragma mark - Event
 
@@ -87,13 +92,19 @@
     }];
 }
 
-- (IBAction)clickOK:(id)sender
+- (IBAction)clickLeftButton:(id)sender
 {
-    [self clickClose:sender];
-    // 回调选中的项
-    if (self.blockSelectOption) {
-        NSInteger index = [self.pickerView selectedRowInComponent:0];
-        self.blockSelectOption(index);
+    if (self.blockClickLeftButton &&
+        self.blockClickLeftButton([self getSelectedIndex])) {
+        [self clickClose:sender];
+    }
+}
+
+- (IBAction)clickRightButton:(id)sender
+{
+    if (self.blockClickRightButton &&
+        self.blockClickRightButton([self getSelectedIndex])) {
+        [self clickClose:sender];
     }
 }
 

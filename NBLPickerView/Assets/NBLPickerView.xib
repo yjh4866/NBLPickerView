@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -36,6 +34,17 @@
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hw6-9p-pSf">
+                                    <rect key="frame" x="0.0" y="0.0" width="72" height="44.5"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="72" id="5e1-4I-hGJ"/>
+                                    </constraints>
+                                    <state key="normal" title="左边按钮"/>
+                                    <connections>
+                                        <action selector="clickLeftButton:" destination="mOF-cn-VB3" eventType="touchUpInside" id="I3E-oY-D7x"/>
+                                        <action selector="clickOK:" destination="mOF-cn-VB3" eventType="touchUpInside" id="58M-Hd-MOP"/>
+                                    </connections>
+                                </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bd5-Nw-dTT">
                                     <rect key="frame" x="305" y="0.0" width="72" height="45"/>
                                     <constraints>
@@ -43,7 +52,7 @@
                                     </constraints>
                                     <state key="normal" title="确定"/>
                                     <connections>
-                                        <action selector="clickOK:" destination="mOF-cn-VB3" eventType="touchUpInside" id="j2c-J5-TVJ"/>
+                                        <action selector="clickRightButton:" destination="mOF-cn-VB3" eventType="touchUpInside" id="3Ix-95-8D8"/>
                                     </connections>
                                 </button>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ufj-3C-Zti" userLabel="Line">
@@ -56,14 +65,17 @@
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
+                                <constraint firstItem="ufj-3C-Zti" firstAttribute="top" secondItem="hw6-9p-pSf" secondAttribute="bottom" id="0Wb-ki-RNT"/>
                                 <constraint firstItem="ufj-3C-Zti" firstAttribute="leading" secondItem="L6w-7H-96h" secondAttribute="leading" id="0fH-x6-fhE"/>
                                 <constraint firstAttribute="trailing" secondItem="bd5-Nw-dTT" secondAttribute="trailing" id="4yu-w6-6JI"/>
                                 <constraint firstAttribute="height" constant="45" id="91b-3B-cif"/>
                                 <constraint firstItem="bd5-Nw-dTT" firstAttribute="top" secondItem="L6w-7H-96h" secondAttribute="top" id="MAU-n8-4K1"/>
+                                <constraint firstItem="hw6-9p-pSf" firstAttribute="leading" secondItem="L6w-7H-96h" secondAttribute="leading" id="P7g-mF-KbE"/>
                                 <constraint firstAttribute="trailing" secondItem="ufj-3C-Zti" secondAttribute="trailing" id="Y9i-M3-ohL"/>
                                 <constraint firstItem="m35-UQ-Qdz" firstAttribute="centerX" secondItem="L6w-7H-96h" secondAttribute="centerX" id="d2X-xT-ret"/>
                                 <constraint firstItem="m35-UQ-Qdz" firstAttribute="centerY" secondItem="L6w-7H-96h" secondAttribute="centerY" id="jJD-Y6-cJF"/>
                                 <constraint firstAttribute="bottom" secondItem="bd5-Nw-dTT" secondAttribute="bottom" id="nhL-Qe-idp"/>
+                                <constraint firstItem="hw6-9p-pSf" firstAttribute="top" secondItem="L6w-7H-96h" secondAttribute="top" id="xyt-gU-HSF"/>
                                 <constraint firstAttribute="bottom" secondItem="ufj-3C-Zti" secondAttribute="bottom" id="yFC-Wf-CL0"/>
                             </constraints>
                         </view>
@@ -102,8 +114,11 @@
             <nil key="simulatedBottomBarMetrics"/>
             <viewLayoutGuide key="safeArea" id="UE2-E5-4g6"/>
             <connections>
-                <outlet property="buttonOK" destination="bd5-Nw-dTT" id="w4B-Jf-GLh"/>
+                <outlet property="buttonLeft" destination="hw6-9p-pSf" id="rEt-QI-Gaq"/>
+                <outlet property="buttonRight" destination="bd5-Nw-dTT" id="JIa-NI-jAj"/>
+                <outlet property="constraintLeftButtonWidth" destination="5e1-4I-hGJ" id="xKI-3g-EKE"/>
                 <outlet property="constraintPickerViewHeight" destination="A67-le-CbI" id="d0k-sf-NsK"/>
+                <outlet property="constraintRightButtonWidth" destination="qJx-Yk-e9P" id="k3p-Ld-pLB"/>
                 <outlet property="contentView" destination="dYY-Lh-SXU" id="KWG-3j-8K6"/>
                 <outlet property="labelTitle" destination="m35-UQ-Qdz" id="Far-Qh-c07"/>
                 <outlet property="pickerView" destination="c3Y-DL-lIP" id="Qzr-0g-J7L"/>

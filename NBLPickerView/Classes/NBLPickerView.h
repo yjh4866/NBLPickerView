@@ -13,7 +13,12 @@ NS_ASSUME_NONNULL_BEGIN
 @interface NBLPickerView : UIView
 
 @property (weak, nonatomic) IBOutlet UILabel *labelTitle;
-@property (weak, nonatomic) IBOutlet UIButton *buttonOK;
+
+@property (weak, nonatomic) IBOutlet UIButton *buttonLeft;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *constraintLeftButtonWidth;
+
+@property (weak, nonatomic) IBOutlet UIButton *buttonRight;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *constraintRightButtonWidth;
 
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *constraintPickerViewHeight;
 
@@ -22,7 +27,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, readonly) NSArray<NSString *> *optionList;
 
-@property (nonatomic, strong) void (^blockSelectOption)(NSInteger index);
+// 返回YES则关闭视图
+@property (nonatomic, strong) BOOL (^blockClickLeftButton)(NSInteger index);
+@property (nonatomic, strong) BOOL (^blockClickRightButton)(NSInteger index);
 
 + (instancetype)showOptionList:(NSArray<NSString *> *)list
                   withIndexSel:(NSInteger)indexSel;
@@ -30,6 +37,8 @@ NS_ASSUME_NONNULL_BEGIN
 + (instancetype)showOptionList:(NSString* (^)(NSInteger row))blockOptionTitle
                withOptionCount:(NSUInteger)optionCount
                    andIndexSel:(NSInteger)indexSel;
+
+- (NSInteger)getSelectedIndex;
 
 @end
 
