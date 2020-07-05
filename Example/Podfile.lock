@@ -1,5 +1,5 @@
 PODS:
-  - NBLPickerView (0.1.1)
+  - NBLPickerView (0.1.2)
 
 DEPENDENCIES:
   - NBLPickerView (from `../`)
@@ -9,8 +9,8 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  NBLPickerView: 0fcf46976dfda71d04baa132530295d6b7d91ae4
+  NBLPickerView: 6321104e491779f4d65be77c99f54713377b4993
 
 PODFILE CHECKSUM: d4e4f13da370c1e721783643994de09a68f80d7e
 
-COCOAPODS: 1.6.1
+COCOAPODS: 1.9.2
