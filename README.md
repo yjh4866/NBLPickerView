@@ -38,7 +38,8 @@ pickerView.blockSelectOption = ^(NSInteger index) {
 
 ### 预览 Preview
 
-![NBLShareView_1](https://github.com/yjh4866/NBLPickerView/blob/master/screenshots/screenshots_1.jpg?raw=true)
+![NBLShareView_1](https://gitee.com/yjh4866/NBLPickerView/raw/master/screenshots/screenshots_1.png)
+![NBLShareView_2](https://gitee.com/yjh4866/NBLPickerView/raw/master/screenshots/screenshots_2.png)
 
 
 ## 用法二
