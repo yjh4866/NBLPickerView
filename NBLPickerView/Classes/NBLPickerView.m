@@ -60,6 +60,7 @@
 {
     NBLPickerView *pickerView = [NBLPickerView showWithIndexSel:indexSel];
     pickerView.optionList = list;
+    [pickerView.buttonLeft setTitle:nil forState:UIControlStateNormal];
     return pickerView;
 }
 
@@ -70,6 +71,7 @@
     NBLPickerView *pickerView = [NBLPickerView showWithIndexSel:indexSel];
     pickerView.blockOptionTitle = blockOptionTitle;
     pickerView.optionCount = optionCount;
+    [pickerView.buttonLeft setTitle:nil forState:UIControlStateNormal];
     return pickerView;
 }
 
@@ -94,7 +96,10 @@
 
 - (IBAction)clickLeftButton:(id)sender
 {
-    if (self.blockClickLeftButton &&
+    if ([self.buttonLeft titleForState:UIControlStateNormal].length < 1) {
+        return;
+    }
+    if (nil == self.blockClickLeftButton ||
         self.blockClickLeftButton([self getSelectedIndex])) {
         [self clickClose:sender];
     }
@@ -102,7 +107,10 @@
 
 - (IBAction)clickRightButton:(id)sender
 {
-    if (self.blockClickRightButton &&
+    if ([self.buttonRight titleForState:UIControlStateNormal].length < 1) {
+        return;
+    }
+    if (nil == self.blockClickRightButton ||
         self.blockClickRightButton([self getSelectedIndex])) {
         [self clickClose:sender];
     }

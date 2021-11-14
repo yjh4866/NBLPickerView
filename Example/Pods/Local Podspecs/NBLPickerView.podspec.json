@@ -1,12 +1,12 @@
 {
   "name": "NBLPickerView",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "summary": "Object-C。基于UIPickerView的列表选择。based on UIPickerView.",
   "description": "Object-C。基于UIPickerView的列表选择，目前只支持一列。based on UIPickerView.",
-  "homepage": "https://github.com/yjh4866/NBLPickerView",
+  "homepage": "https://gitee.com/yjh4866/NBLPickerView",
   "screenshots": [
-    "https://github.com/yjh4866/NBLPickerView/blob/master/screenshots/screenshots_1.jpg?raw=true",
-    "https://github.com/yjh4866/NBLPickerView/blob/master/screenshots/screenshots_2.jpg?raw=true"
+    "https://gitee.com/yjh4866/NBLPickerView/raw/master/screenshots/screenshots_1.png",
+    "https://gitee.com/yjh4866/NBLPickerView/raw/master/screenshots/screenshots_2.png"
   ],
   "license": {
     "type": "MIT",
@@ -16,8 +16,8 @@
     "杨建红": "yjh4866@163.com"
   },
   "source": {
-    "git": "https://github.com/yjh4866/NBLPickerView.git",
-    "tag": "0.1.2"
+    "git": "https://gitee.com/yjh4866/NBLPickerView.git",
+    "tag": "0.1.3"
   },
   "social_media_url": "https://blog.csdn.net/yjh4866",
   "platforms": {
